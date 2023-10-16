@@ -711,6 +711,8 @@ Apabila ingin dilakukan pengecekan, ubah isi file */etc/resolv.conf* pada node N
 
 ### 20. Karena website www.parikesit.abimanyu.yyy.com semakin banyak pengunjung dan banyak gambar gambar random, maka ubahlah request gambar yang memiliki substring “abimanyu” akan diarahkan menuju abimanyu.png.
 
+Jalankan `a2enmod rewrite`
+
 Buat file */var/www/parikesit.abimanyu.a14/.htaccess* dengan isi berikut
 
     RewriteEngine On

@@ -442,7 +442,7 @@ Pada node Arjuna, buat file */etc/nginx/sites-available/lb-arjuna* dengan isi se
             }
     }
 
-Jalankan `ln -s /etc/nginx/sites-available/lb-arjuna /etc/nginx/sites-enabled lalu rm -rf /etc/nginx/sites-enabled/default` kemudian `service nginx restart`
+Jalankan `ln -s /etc/nginx/sites-available/lb-arjuna /etc/nginx/sites-enabled` lalu `rm -rf /etc/nginx/sites-enabled/default` kemudian `service nginx restart`
 
 Jika ingin dilakukan pengecekan, pada server **Nakula** set */etc/resolv.conf* menjadi nameserver 10.6.1.5 kemudian panggil `lynx arjuna.a14.com`
 
@@ -721,3 +721,5 @@ Buat file */var/www/parikesit.abimanyu.a14/.htaccess* dengan isi berikut
     RewriteRule abimanyu http://parikesit.abimanyu.a14.com/public/images/abimanyu.png [L,R]
 
 Jalankan `service apache2 restart`
+
+Dapat dipanggil `lynx parikesit.abimanyu.a14.com/public/images/not-abimanyu.png` pada client untuk melakukan pengecekan. 

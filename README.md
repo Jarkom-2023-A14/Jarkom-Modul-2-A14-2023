@@ -205,6 +205,7 @@ Tambahkan berikut pada file */etc/bind/named.conf.local* di node Yudhistira
 Copykan file **db.local** ke folder arjuna tersebut dengan perintah `cp /etc/bind/db.local /etc/bind/domain/3.6.10.in-addr.arpa`
 
 Ubah file 3.6.10.in-addr.arpa pada node Yudhistira sebagai berikut
+`
     ;
     ; BIND data file for local loopback interface
     ;
@@ -218,7 +219,7 @@ Ubah file 3.6.10.in-addr.arpa pada node Yudhistira sebagai berikut
     ;
     3.6.10.in-addr.arpa.	IN	NS	abimanyu.a14.com.
     3			IN	PTR	abimanyu.a14.com.
-
+`
 Apabila ingin melakukan pengecekan, pada node Nakula, lakukan apt-get update kemudian `apt-get install dnsutils -y` lalu ubah isi file */etc/resolv.conf* menjadi nameserver 10.6.1.4 kemudian gunakan perintah **host -t PTR 10.6.3.3**
 
 

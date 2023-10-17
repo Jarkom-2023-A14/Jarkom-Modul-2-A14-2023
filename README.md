@@ -129,7 +129,7 @@ Ubah isi file **arjuna.a14.com** menjadi berikut
     @	IN	A	    10.6.2.2	    ; IP Arjuna
     www	IN	CNAME	arjuna.a14.com.
 Jalankan perintah `service bind9 restart` pada node **Yudhistira**\
-Apabila ingin melakukan pengecekan, ubah isi file /etc/resolv.conf pada node Nakula menjadi nameserver 10.6.1.4
+Apabila ingin melakukan pengecekan, ubah isi file /etc/resolv.conf pada node Nakula menjadi nameserver 10.6.1.4 lalu `ping arjuna.a14.com` atau `ping www.arjuna.14.com` 
 
 
 ### 3. Dengan cara yang sama seperti soal nomor 2, buatlah website utama dengan akses ke abimanyu.yyy.com dan alias www.abimanyu.yyy.com.
@@ -165,7 +165,7 @@ Ubah isi file abimanyu.a14.com menjadi berikut
 
 Jalankan perintah service bind9 restart pada node **Yudhistira**
 
-Apabila ingin melakukan pengecekan, ubah isi file */etc/resolv.conf* pada node Nakula menjadi nameserver 10.6.1.4
+Apabila ingin melakukan pengecekan, ubah isi file */etc/resolv.conf* pada node Nakula menjadi nameserver 10.6.1.4. Lalu lakukan `ping abimanyu.a14.com` atau `ping www.abimanyu.14.com`
 
 
 ### 4. Kemudian, karena terdapat beberapa web yang harus di-deploy, buatlah subdomain parikesit.abimanyu.yyy.com yang diatur DNS-nya di **Yudhistira** dan mengarah ke Abimanyu.
@@ -190,7 +190,7 @@ Pada node Yudhistira, tambahkan baris parikesit	IN	A	10.6.3.3 pada file */etc/bi
 
 Jalankan perintah service bind9 restart pada node Yudhistira
 
-Apabila ingin melakukan pengecekan, ubah isi file */etc/resolv.conf* pada node Nakula menjadi nameserver 10.6.1.4
+Apabila ingin melakukan pengecekan, ubah isi file */etc/resolv.conf* pada node Nakula menjadi nameserver 10.6.1.4, Lalu lakukan `ping parikesit.abimanyu.a14.com`
 
 
 ### 5. Buat juga reverse domain untuk domain utama. (Abimanyu saja yang direverse)
